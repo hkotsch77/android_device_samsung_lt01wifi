@@ -3,13 +3,13 @@ PRODUCT_RELEASE_NAME := lt01wifi
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/lt01-common/common.mk)
-$(call inherit-product, device/samsung/lt01wifi/lt01wifi.mk)
+$(call inherit-product, device/samsung/lt01wifi/device.mk)
 
 # Inherit from the common product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lt01wifi
