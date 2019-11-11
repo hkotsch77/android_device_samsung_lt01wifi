@@ -15,6 +15,8 @@
 #
 
 LOCAL_PATH := device/samsung/lt01wifi
+COMMON_PATH := device/samsung/smdk4412-common
+
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -28,14 +30,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/lt01wifi
-  
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    sensors.smdk4x12
+
 # Gps
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
 # Product specific Packages
 PRODUCT_PACKAGES += \
-    libsecril-client
+    libsecril-client \
+    SamsungServiceMode
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

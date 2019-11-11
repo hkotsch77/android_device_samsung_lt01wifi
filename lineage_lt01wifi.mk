@@ -2,7 +2,8 @@
 PRODUCT_RELEASE_NAME := lt01wifi
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/lt01-common/common.mk)
+#$(call inherit-product, device/samsung/lt01-common/common.mk)
+$(call inherit-product, device/samsung/smdk4412-common/common.mk)
 $(call inherit-product, device/samsung/lt01wifi/device.mk)
 
 # Inherit from the common product configuration
